@@ -1,6 +1,6 @@
-# Fnxdigital.Ui.Common
+# FnxDigital.UI.Component.Common
 
-This is the repository of the Fnxdigital.Ui.Common library.
+This is the repository of the FnxDigital.UI.Component.Common library.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 ## Setup / Installation
