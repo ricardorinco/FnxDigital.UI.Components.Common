@@ -1,24 +1,55 @@
-# FnxCrypto
+# FnxCrypto Service
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+A service library for encrypt and decrypt values in your angular project.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
-## Code scaffolding
+## Installing
 
-Run `ng generate component component-name --project fnx-crypto` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project fnx-crypto`.
-> Note: Don't forget to add `--project fnx-crypto` or else it will be added to the default project in your `angular.json` file. 
+In your Angular project run
 
-## Build
+```typescript
+npm i --save @fnx-components/crypto
+```
 
-Run `ng build fnx-crypto` to build the project. The build artifacts will be stored in the `dist/` directory.
+## FnxCrypto config
 
-## Publishing
+| Value     | Description                                       |
+| --------- | ------------------------------------------------- |
+| secretKey | The defined key used to encrypt and decrypt value |
 
-After building your library with `ng build fnx-crypto`, go to the dist folder `cd dist/fnx-crypto` and run `npm publish`.
+## Getting Started
 
-## Running unit tests
+After installing it you need to provide your SecreKey in app.module.ts using `forRoot` method
 
-Run `ng test fnx-crypto` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { FnxCryptoModule } from '@fnx-components/crypto';
 
-## Further help
+imports: [
+    ...
+    FnxCryptoModule.forRoot({
+        secretKey: YOUR_SECRET_KEY,
+    }),
+    ...
+]
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+inject the fnxCryptoService in your controller
+
+```typescript
+constructor(
+    ...
+    private readonly fnxCryptoService: FnxCryptoService,
+    ...
+) { }
+```
+
+then you can start pushing events on your gtm
+
+```typescript
+// Encrypt value
+const encryptedValue = this.fnxCryptoService.encrypt(`Roads? Where We're Going We Don't Need Roads`);
+
+// Decrypted value
+const encryptedValue = 'U2FsdGVkX1+HPC4KY6T9tY5dFnqc9sEVcuTXizTEfdZzdZsOq9d708EzDT0SDtepcExTy3N3BeBxaf8YpQe1Kw==';
+const decryptedValue = this.fnxCryptoService.decrypt(encryptedValue);
+```

@@ -1,5 +1,5 @@
 /*
- * Public API Surface of fnx-crypto
+ * Public API Surface of FnxCrypto
  */
 export * from './lib/configs/fnx-crypto.config';
 export * from './lib/services/fnx-crypto.service';

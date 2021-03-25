@@ -22,3 +22,23 @@ Install the npm packages dependencies:
 ```sh
   npm install
 ```
+
+## Code Quality and Security
+
+This project use SonarQube tool for continuously inspecting the quality and security of codebases.
+
+```sh
+  // Sonar Scanner
+  npm run sonar
+```
+
+## Dependencies
+
+AppJornadaCliente uses the following frameworks.
+
+> Waring: Be cautious when upgrading any frameworks.
+> Info: Instructions on how to use the frameworks are available in the documentation.
+
+| Package                    | Version | Documentation                                                                                                        |
+| -------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| Crypto-JS                  |  4.0.0  | [https://www.npmjs.com/package/crypto-js](https://www.npmjs.com/package/crypto-js)                                   |

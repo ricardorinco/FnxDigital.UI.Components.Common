@@ -5,30 +5,43 @@ import { Inject, Injectable } from '@angular/core';
 import { FnxCryptoConfig } from './../configs/fnx-crypto.config';
 import { FNX_CRYPTO_CONFIG } from './../configs/fnx-crypto.config.token';
 
+/**
+ * FnxCrypto Service
+ */
 @Injectable({ providedIn: 'root' })
 export class FnxCryptoService {
     /**
-     * Construtor da classe
-     */
-    constructor(@Inject(FNX_CRYPTO_CONFIG) private readonly fnxCryptoConfig: FnxCryptoConfig) {}
-
-    /**
-     * Criptografa um valor
+     * Class constructor
      *
-     * @param valor Valor a ser criptografado
-     * @returns string Valor criptografado
+     * @fnxCryptoConfig Instance of FnxCryptoConfig
      */
-    public criptografar(valor: string): string {
-        return CryptoJS.AES.encrypt(valor, this.fnxCryptoConfig.cryptoSecretKey).toString();
+    constructor(@Inject(FNX_CRYPTO_CONFIG) private readonly fnxCryptoConfig: FnxCryptoConfig) {
+        if (fnxCryptoConfig === null || fnxCryptoConfig === undefined) {
+            throw new Error('FnxCryptoConfig needs to be defined');
+        }
+
+        if (fnxCryptoConfig.secretKey === null || fnxCryptoConfig.secretKey === undefined) {
+            throw new Error('Secret key needs to be defined');
+        }
     }
 
     /**
-     * Descriptografar um valor
+     * Encrypt a value using AES algorithm
      *
-     * @param valor Valor a ser descriptografado
-     * @returns string Valor descriptografado
+     * @param value Value to be encrypted
+     * @returns string Value encrypted
      */
-    public descriptografar(valor: string): string {
-        return CryptoJS.AES.decrypt(valor, this.fnxCryptoConfig.cryptoSecretKey).toString(CryptoJS.enc.Utf8);
+    public encrypt(value: string): string {
+        return CryptoJS.AES.encrypt(value, this.fnxCryptoConfig.secretKey).toString();
+    }
+
+    /**
+     * Decrypt a value using AES algorithm
+     *
+     * @param value Value to be decrypted
+     * @returns string Value decrypted
+     */
+    public decrypt(value: string): string {
+        return CryptoJS.AES.decrypt(value, this.fnxCryptoConfig.secretKey).toString(CryptoJS.enc.Utf8);
     }
 }

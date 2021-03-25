@@ -1,3 +1,7 @@
+/**
+ * FnxCrypto Config
+ */
 export interface FnxCryptoConfig {
-    cryptoSecretKey: string;
+    /** Secret Key */
+    secretKey: string;
 }

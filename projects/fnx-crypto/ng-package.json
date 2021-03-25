@@ -3,8 +3,7 @@
     "dest": "../../dist/fnx-crypto",
     "lib": {
         "entryFile": "src/public-api.ts",
-        "umdModuleIds": {
-            "crypto-js": "crypto-js"
-        }
-    }
+        "umdModuleIds": { "crypto-js": "CryptoJS" }
+    },
+    "allowedNonPeerDependencies": ["crypto-js"]
 }
