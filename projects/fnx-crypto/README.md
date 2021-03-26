@@ -11,45 +11,27 @@ In your Angular project run
 npm i --save @fnx-components/crypto
 ```
 
-## FnxCrypto config
-
-| Value     | Description                                       |
-| --------- | ------------------------------------------------- |
-| secretKey | The defined key used to encrypt and decrypt value |
-
 ## Getting Started
 
-After installing it you need to provide your SecreKey in app.module.ts using `forRoot` method
-
-```typescript
-import { FnxCryptoModule } from '@fnx-components/crypto';
-
-imports: [
-    ...
-    FnxCryptoModule.forRoot({
-        secretKey: YOUR_SECRET_KEY,
-    }),
-    ...
-]
-```
-
-inject the fnxCryptoService in your controller
+After installing it you need inject the fnxCryptoService in your controller
 
 ```typescript
 constructor(
     ...
-    private readonly fnxCryptoService: FnxCryptoService,
-    ...
+    private readonly fnxCryptoService: FnxCryptoService
 ) { }
 ```
 
-then you can start pushing events on your gtm
+then you can start encrypt and decrypt your values
 
 ```typescript
+// Your secret key
+const secretKey = 'lANQBCf8TdBWhMHJm-IBlQ';
+
 // Encrypt value
-const encryptedValue = this.fnxCryptoService.encrypt(`Roads? Where We're Going We Don't Need Roads`);
+const encryptedValue = this.fnxCryptoService.encrypt(`Roads? Where We're Going We Don't Need Roads`, secretKey);
 
 // Decrypted value
 const encryptedValue = 'U2FsdGVkX1+HPC4KY6T9tY5dFnqc9sEVcuTXizTEfdZzdZsOq9d708EzDT0SDtepcExTy3N3BeBxaf8YpQe1Kw==';
-const decryptedValue = this.fnxCryptoService.decrypt(encryptedValue);
+const decryptedValue = this.fnxCryptoService.decrypt(encryptedValue, secretKey);
 ```
