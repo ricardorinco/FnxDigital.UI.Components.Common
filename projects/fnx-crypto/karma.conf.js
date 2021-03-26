@@ -43,7 +43,7 @@ module.exports = function (config) {
         },
         sonarQubeUnitReporter: {
             sonarQubeVersion: 'LATEST',
-            outputFile:  './../../dist/coverage-reports/sonarqube/ut_report.xml',
+            outputFile: './../../dist/coverage-reports/sonarqube/ut_report.xml',
             overrideTestDescription: true,
             testPaths: ['./projects/fnx-crypto/src'],
             testFilePattern: '.spec.ts',
