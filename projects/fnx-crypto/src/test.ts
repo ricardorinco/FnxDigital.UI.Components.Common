@@ -10,11 +10,7 @@ import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@ang
  * This file is required by karma.conf.js and loads recursively all the .spec and framework files
  */
 declare const require: {
-    context(
-        path: string,
-        deep?: boolean,
-        filter?: RegExp
-    ): {
+    context(path: string, deep?: boolean, filter?: RegExp): {
         keys(): string[];
         <T>(id: string): T;
     };
