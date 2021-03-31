@@ -4,13 +4,11 @@
     "scripts": {
         "build:fnx-crypto": "ng build fnx-crypto --prod",
         "test:fnx-crypto": "ng test fnx-crypto --code-coverage",
+        "build:fnx-storage": "ng build fnx-storage --prod",
+        "test:fnx-storage": "ng test fnx-storage --code-coverage",
         "docs": "compodoc -p tsconfig.json --output dist/docs --serve --watch --open",
         "sonar": "sonar-scanner",
-        "ng": "ng",
-        "start": "ng serve",
-        "build": "ng build",
-        "test": "ng test",
-        "lint": "ng lint"
+        "ng": "ng"
     },
     "private": true,
     "dependencies": {
