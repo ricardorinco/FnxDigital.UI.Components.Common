@@ -15,9 +15,10 @@
         "lib": ["es2018", "dom"],
         "paths": {
             "@fnx-components/crypto": ["./dist/fnx-crypto"],
-            "@fnx-components/crypto/*": [
-              "./dist/fnx-crypto/*"
-            ]
+            "@fnx-components/crypto/*": ["./dist/fnx-crypto/*"],
+
+            "@fnx-components/storage": ["./dist/fnx-storage"],
+            "@fnx-components/storage/*": ["./dist/fnx-storage/*"],
         }
     },
     "angularCompilerOptions": {
