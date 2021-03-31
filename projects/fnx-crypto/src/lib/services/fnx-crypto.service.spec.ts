@@ -34,7 +34,7 @@ describe('FnxCryptoService', () => {
             expect(encryptedValue).toMatch('^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$');
         });
 
-        it(`should decrypt a value and obtained the text '${dontNeedRoads}'`, () => {
+        it(`should decrypt a value and obtain the text '${dontNeedRoads}'`, () => {
             spyOn(fnxCryptoService, 'decrypt').and.callThrough();
             const encryptedValue =
                 'U2FsdGVkX1+HPC4KY6T9tY5dFnqc9sEVcuTXizTEfdZzdZsOq9d708EzDT0SDtepcExTy3N3BeBxaf8YpQe1Kw==';
@@ -56,7 +56,7 @@ describe('FnxCryptoService', () => {
             expect(encryptedData).toMatch('^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$');
         });
 
-        it(`should decrypt a json object and obtained the data`, () => {
+        it(`should decrypt a json object and obtain the data`, () => {
             spyOn(fnxCryptoService, 'decrypt').and.callThrough();
             const encryptedData =
                 'U2FsdGVkX19wMOe9R5ir73HsGuiB9yPis7oo4ioQE6puJSgdNKZOA2b+uad63vki+QY8/YuQq4fHIpckSWy77R1wwHnsplmxIJJCLFnjsYtLQBB4l/BNUwubz35DmOyW';

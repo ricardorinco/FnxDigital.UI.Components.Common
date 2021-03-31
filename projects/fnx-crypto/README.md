@@ -1,6 +1,6 @@
 # FnxCrypto Service
 
-A service library for encrypt and decrypt values in your angular project.
+A service library for encrypting and decrypting values in your angular project.
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Installing
@@ -13,16 +13,18 @@ npm i --save @fnx-components/crypto
 
 ## Getting Started
 
-After installing it you need inject the fnxCryptoService in your controller
+After installing it you need to inject the FnxCryptoService in your controller
 
 ```typescript
+import { FnxCryptoService } from '@fnx-components/crypto';
+
 constructor(
     ...
     private readonly fnxCryptoService: FnxCryptoService
 ) { }
 ```
 
-then you can start encrypt and decrypt your values
+then you can start encrypting and decrypting your values
 
 ```typescript
 // Your secret key

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 
 /**
  * FnxSessionStorage Service
+ *
+ * Class responsible for storing the data into browser's session storage
  */
 @Injectable({ providedIn: 'root' })
 export class FnxSessionStorageService {

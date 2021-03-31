@@ -50,7 +50,7 @@ describe('FnxSessionStorageService', () => {
             expect(savedData).toEqual(martyMcflyData);
         });
 
-        it('should try retrieve data with non existent key in session storage and return undefined', () => {
+        it('should try retrieve data with non existing key in session storage and return undefined', () => {
             spyOn(fnxSessionStorageService, 'getItem').and.callThrough();
 
             const nullData = fnxSessionStorageService.getItem('secretKey2');
