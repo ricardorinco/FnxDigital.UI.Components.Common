@@ -1,5 +1,6 @@
 {
     "name": "@fnx-components/crypto",
+    "description": "FnxComponents: Crypto",
     "version": "0.4.0",
     "dependencies": {
         "crypto-js": "^4.0.0",
