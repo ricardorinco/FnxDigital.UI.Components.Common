@@ -1,7 +1,7 @@
 {
     "name": "@fnx-components/crypto",
     "description": "FnxComponents: Crypto",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "scripts": {
         "release": "standard-version",
         "release:minor": "standard-version --release-as minor",
