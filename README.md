@@ -32,6 +32,13 @@ This project use SonarQube tool for continuously inspecting the quality and secu
   npm run sonar
 ```
 
+## Components available
+
+| Project     | Name                     | Import                                                                               |
+| ----------- | ------------------------ | ------------------------------------------------------------------------------------ |
+| fnx-crypto  | FnxCryptoService         |  import { FnxCryptoService } from '@fnx-components/crypto';                          |
+| fnx-storage | FnxSessionStorageService |  import { FnxSessionStorageService } from '@fnx-components/session-storage.service'; |
+
 ## Dependencies
 
 AppJornadaCliente uses the following frameworks.
