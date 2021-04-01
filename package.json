@@ -1,5 +1,6 @@
 {
     "name": "fnxdigital-ui-components-common",
+    "description": "FnxDigital: UI Components Common",
     "version": "0.0.0",
     "scripts": {
         "build:fnx-crypto": "ng build fnx-crypto --prod",
