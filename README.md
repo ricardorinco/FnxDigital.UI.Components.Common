@@ -1,6 +1,6 @@
-# FnxDigital.UI.Component.Common
+# seven.ui.components.common
 
-This is the repository of the FnxDigital.UI.Component.Common library.
+This is the repository of the seven.ui.components.common library.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 ## Setup / Installation
